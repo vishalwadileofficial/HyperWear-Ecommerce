@@ -1,0 +1,110 @@
+/* Add these styles to your existing ProductDetail.css */
+
+.product-actions {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.add-to-cart-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.add-to-cart-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.add-to-cart-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.buy-now-btn {
+  background: #28a745;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.buy-now-btn:hover {
+  background: #218838;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(40, 167, 69, 0.3);
+}
+
+.buy-now-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.wishlist-btn {
+  background: white;
+  border: 2px solid #ddd;
+  font-size: 1.5rem;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.wishlist-btn:hover {
+  border-color: #ff4757;
+  transform: scale(1.1);
+}
+
+.wishlist-btn.active {
+  border-color: #ff4757;
+  background: #fff5f5;
+}
+
+.share-btn {
+  background: white;
+  border: 2px solid #667eea;
+  color: #667eea;
+  padding: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.share-btn:hover {
+  background: #667eea;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .product-actions {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  
+  .wishlist-btn {
+    grid-column: 1 / 2;
+  }
+  
+  .share-btn {
+    grid-column: 2 / 3;
+  }
+  
+  .add-to-cart-btn,
+  .buy-now-btn {
+    grid-column: 1 / -1;
+  }
+}
